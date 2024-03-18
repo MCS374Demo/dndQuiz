@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dnd Quiz</string>
+    <string name="question_beholder">Does Beholder have 4 eyes?</string>
+    <string name="question_fireball">Is fireball a third level spell</string>
+    <string name="question_Lily">Is Lily American</string>
+    <string name="question_Yahya">Does Yahya have 1 million follower on Tiktok</string>
+    <string name="question_Peace">Is Peace a Chelsea fan</string>
+    <string name="true_button">TRUE!</string>
+    <string name="false_button">FALSE!</string>
+    <string name="incorrect_toast"> Chris says you are wrong!</string>
+    <string name="correct_toast">Chris says you are right!</string>
+    <string name="next_button"> NEXT! </string>
+    <string name="backButton"> BACK! </string>
+    <string name = "warning_text"> Cheating is wrong, are you sure you want to do this?</string>
+    <string name = "show_answer_button">Show Answer</string>
+    <string name = "cheat_button">Cheat!</string>
+    <string name = "judgement_toast">Cheating is so wrong!!!</string>
+</resources>

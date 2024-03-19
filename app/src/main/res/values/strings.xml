@@ -5,6 +5,7 @@
     <string name="question_dragon">Dragons are not immortal.</string>
     <string name="question_thief">The thief class is one of the original 3 classes of DnD.</string>
     <string name="question_ranger">Ranger is the best archery class.</string>
+    <string name="question_priest">Priest can only heal.</string>
     <string name="true_button">TRUE!</string>
     <string name="false_button">FALSE!</string>
     <string name="incorrect_toast">You are wrong!</string>

@@ -14,7 +14,9 @@ class QuizViewModel (private val savedStateHandle: SavedStateHandle) : ViewModel
         Question(R.string.question_fireball, true),
         Question(R.string.question_dragon, true),
         Question(R.string.question_thief, false),
-        Question(R.string.question_ranger, false))
+        Question(R.string.question_ranger, false),
+        Question(R.string.question_priest, false)
+    )
 
     var currentIndex = 0
 

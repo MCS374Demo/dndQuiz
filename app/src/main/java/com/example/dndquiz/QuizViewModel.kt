@@ -11,10 +11,10 @@ class QuizViewModel (private val savedStateHandle: SavedStateHandle) : ViewModel
 
     val questionBank = listOf(
         Question(R.string.question_beholder, false),
-        Question(R.string.question_Lily, false),
         Question(R.string.question_fireball, true),
-        Question(R.string.question_Peace, true),
-        Question(R.string.question_Yahya, true))
+        Question(R.string.question_dragon, true),
+        Question(R.string.question_thief, false),
+        Question(R.string.question_ranger, false))
 
     var currentIndex = 0
 

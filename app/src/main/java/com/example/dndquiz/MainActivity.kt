@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.dndquiz.databinding.ActivityMainBinding
 import android.app.Activity
+import android.os.Message
 
 // add a log variable for debugging
 private const val TAG = "MainActivity"
@@ -21,6 +22,7 @@ private const val KEY_INDEX = "index"
 private const val CHEAT = 0
 
 @Suppress("DEPRECATION")
+
 class MainActivity : AppCompatActivity() {
     // create two button objects ready to go
     private lateinit var binding: ActivityMainBinding
@@ -48,6 +50,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate(Bundle?) is called, a process is created")
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         val currentIndex = savedInstanceState?.getInt(KEY_INDEX, 0) ?: 0
         quizViewModel.currentIndex = currentIndex

@@ -1,21 +1,19 @@
 package com.example.dndquiz
 
 import Question
-import android.util.Log
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 
-private const val TAG = "QuizViewModel"
+//private const val TAG = "QuizViewModel"
 
-class QuizViewModel (private val savedStateHandle: SavedStateHandle) : ViewModel() {
+class QuizViewModel : ViewModel() {
 
     val questionBank = listOf(
-        Question(R.string.question_beholder, false),
-        Question(R.string.question_fireball, true),
-        Question(R.string.question_dragon, true),
-        Question(R.string.question_thief, false),
-        Question(R.string.question_ranger, false),
-        Question(R.string.question_priest, false)
+        Question(R.string.question_beholder, false, R.drawable.ic_launcher_foreground),
+        Question(R.string.question_fireball, true, R.drawable.ic_launcher_background),
+        Question(R.string.question_dragon, true, R.drawable.ic_launcher_foreground),
+        Question(R.string.question_thief, false, R.drawable.ic_launcher_background),
+        Question(R.string.question_ranger, false, R.drawable.ic_launcher_foreground),
+        Question(R.string.question_priest, false, R.drawable.ic_launcher_background)
     )
 
     var currentIndex = 0
@@ -25,13 +23,14 @@ class QuizViewModel (private val savedStateHandle: SavedStateHandle) : ViewModel
         set(value) = savedStateHandle.set(IS_CHEATER_KEY, value)
     */
 
-    // this function keep track of current question's answer
     val currentQuestionAnswer: Boolean
         get() = questionBank[currentIndex].answer
     val currentQuestionText: Int
         get() = questionBank[currentIndex].textResId
-    // once I remember the current question's position
-    // I'll write a function that move to the next question
+
+    val currentQuestionPicture: Int
+        get() = questionBank[currentIndex].picture
+
     fun moveToNext(){
         currentIndex = (currentIndex+1) % questionBank.size
     }

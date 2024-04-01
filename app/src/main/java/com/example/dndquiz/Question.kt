@@ -1,2 +1,3 @@
 import androidx.annotation.StringRes
-data class Question(@StringRes val textResId: Int, val answer: Boolean, var wasAnswered: Boolean = false)
+import androidx.annotation.DrawableRes
+data class Question(@StringRes val textResId: Int, val answer: Boolean, @DrawableRes var picture: Int, var wasAnswered: Boolean = false)

@@ -1,20 +1,14 @@
 package com.example.dndquiz
 
-import Question
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
-import android.widget.Button
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.dndquiz.databinding.ActivityMainBinding
 import android.app.Activity
-import android.os.Message
 
 // add a log variable for debugging
 private const val TAG = "MainActivity"
@@ -78,7 +72,6 @@ class MainActivity : AppCompatActivity() {
 
         // once you click the next button, text is going to rotate
         binding.nextButton.setOnClickListener { view: View->
-
             quizViewModel.moveToNext()
             //val questionTextResId = questionBank[currentIndex].textResId
             //binding.questionTextView.setText(questionTextResId)
@@ -157,7 +150,9 @@ class MainActivity : AppCompatActivity() {
     }
     private fun updateQuestion(){
         val questionTextResId = quizViewModel.currentQuestionText
+        val questionPictureResId = quizViewModel.currentQuestionPicture
         binding.questionTextView.setText(questionTextResId)
+        binding.imageView.setImageResource(questionPictureResId)
     }
 
     // I need a function that checks my answer

@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity() {
             checkAnswer(false)
         }
 
-        // once you click the next button, text is going to rotate
         binding.nextButton.setOnClickListener { view: View->
 
             quizViewModel.moveToNext()
